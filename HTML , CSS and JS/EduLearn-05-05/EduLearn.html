@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduLearn</title>
+</head>
+<body>
+    <form action="" method="post">
+        <p>
+            <label for="FistName" >First Name:</label>
+            <input type="text" id="firstName"  name="FistName">
+        </p>
+        <p>
+            <label for="MiddleName" >Middle Name:</label>
+            <input type="text" id="MiddleName" name="MiddleName">
+        </p>
+        <p>
+            <label for="LastName" >Last Name:</label>
+            <input type="text" id="LastName">
+        </p>
+        <p>
+            <label for="DOB" > Date of Birth:</label>
+            <input type="date" id="dob" name="DOB" min="1966-01-01" max="2010-01-01">
+        </p>
+        <p>
+            <label for="gender">Gender:</label>
+             <input type="radio" id="male" name="gender" value="male" required>
+                    <span>Male</span>
+                </input>
+                <input type="radio" id="female" name="gender" value="female" required>
+                    <span>Female</span>
+                </input>
+        </p>
+        <p>
+            <label for="ProfilePic">Profile Picture:</label>
+            <input type="file" id="ProfilePic" name="ProfilePic" required>
+        </p>
+
+ <!-- INPUT TYPE: range (slider)
+                <div class="form-group">
+                    <label for="experience">Years of Experience: <span id="expValue">0</span> years</label>
+                    <input type="range" id="experience" name="experience"
+                           min="0" max="40" step="1" value="0"
+                           oninput="document.getElementById('expValue').textContent = this.value">
+                    <span class="helper-text">Slide to select your years of professional experience</span>
+                </div>
+  -->
+
+
+    <p>
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="Phone">
+    </p>
+
+    <p>
+        <label for="website">Website/Portfolio URL:</label>
+        <input type="url" id="website" name="Website">
+    </p>
+
+    <p>
+        <label for="address">Address:</label><br>
+        <textarea id="address" name="Address"></textarea>
+    </p>
+
+    <p>
+        <label for="country">Country:</label>
+        <select id="country" name="Country">
+            <option value="india">India</option>
+            <option value="usa">USA</option>
+            <option value="uk">UK</option>
+        </select>
+    </p>
+
+    <p>
+        <label for="city">City:</label>
+        <select id="city" name="City">
+            <option value="delhi">Delhi</option>
+            <option value="mumbai">Mumbai</option>
+            <option value="bangalore">Bangalore</option>
+        </select>
+    </p>
+
+    <p>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="Username" minlength="5" maxlength="20">
+    </p>
+
+    <p>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="Password">
+    </p>
+
+    <p>
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="ConfirmPassword">
+    </p>
+
+    <p>
+        <label for="securityQuestion">Security Question:</label>
+        <select id="securityQuestion" name="SecurityQuestion">
+            <option value="pet">Your first pet name?</option>
+            <option value="school">Your school name?</option>
+            <option value="city">City you were born in?</option>
+        </select>
+    </p>
+
+ <p>
+        <label for="securityAns">Answer:</label>
+        <input type="text" id="securityAns" name="SecurityAnswer" required>
+    </p>
+
+ <p>
+        <label for="education">Highest Education:</label>
+        <input type="text" id="education" name="education" required>
+    </p>
+
+    <p>
+        <label for="field">Field of Study:</label>
+        <input type="text" id="field" name="Field" required>
+    </p>
+
+    <p>
+         <label for="experience">Years of Experience: <span id="expValue">0</span> years</label>
+                    <input type="range" id="experience" name="experience"
+                           min="0" max="40" step="1" value="0"
+                           oninput="document.getElementById('expValue').textContent = this.value">
+                    <span class="helper-text">Slide to select your years of professional experience</span>
+    </p>
+
+    <p>
+        <label for="skill">Primary Skill:</label>
+        <input list="skills" id="skill" name="Skill" required>
+        <datalist id="skills">
+            <option value="HTML & CSS">
+            <option value="JavaScript">
+            <option value="Angular">
+            <option value="Java">
+        </datalist>
+    </p>
+
+
+    <p>
+        <input type="submit" value="Register">
+    </p>
+
+</form>
+    </form>
+</body>
+</html>
