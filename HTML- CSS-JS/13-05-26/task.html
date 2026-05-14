@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Inventory Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Product Inventory Management System</h1>
+        <p>Manage Products and Inventory</p>
+    </header>
+
+    <main>
+
+        <section class="form-section">
+
+            <h2>Add Product</h2>
+
+            <form id="product-form">
+
+                <label>Product Name</label>
+                <input type="text" id="product-name">
+
+                <label>Category</label>
+                <select id="product-category">
+
+                    <option value="">Select Category</option>
+
+                    <option value="Electronics">
+                        Electronics
+                    </option>
+
+                    <option value="Clothing">
+                        Clothing
+                    </option>
+
+                    <option value="Books">
+                        Books
+                    </option>
+
+                    <option value="Stationery">
+                        Stationery
+                    </option>
+
+                </select>
+
+                <label>Price</label>
+                <input type="number" id="product-price">
+
+                <label>Quantity</label>
+                <input type="number" id="product-quantity">
+
+                <button type="button" id="add-product-btn">
+                    Add Product
+                </button>
+
+            </form>
+
+        </section>
+
+        <section class="filter-section">
+
+            <h2>Search and Filter</h2>
+
+            <input type="text"
+                id="search-box"
+                placeholder="Search Product">
+
+            <select id="filter-category">
+
+                <option value="">
+                    Filter By Category
+                </option>
+
+                <option value="Electronics">
+                    Electronics
+                </option>
+
+                <option value="Clothing">
+                    Clothing
+                </option>
+
+                <option value="Books">
+                    Books
+                </option>
+
+                <option value="Stationery">
+                    Stationery
+                </option>
+
+            </select>
+
+            <input type="number"
+                id="min-price"
+                placeholder="Min Price">
+
+            <input type="number"
+                id="max-price"
+                placeholder="Max Price">
+
+            <button id="filter-btn">
+                Apply Filter
+            </button>
+
+        </section>
+
+        <section class="stock-alert-section">
+
+            <h2>Low Stock Alerts</h2>
+
+            <div id="stock-alerts">
+
+                No Low Stock Alerts
+
+            </div>
+
+        </section>
+
+        <section class="loading-section">
+
+            <div id="loading-spinner">
+
+                Loading Products...
+
+            </div>
+
+        </section>
+
+        <section class="product-section">
+
+            <h2>Product List</h2>
+
+            <div id="product-container">
+
+                <div class="product-card">
+
+                    <h3>Wireless Mouse</h3>
+
+                    <p>Category: Electronics</p>
+
+                    <p>Price: $25.99</p>
+
+                    <p>Quantity: 50</p>
+
+                    <p>Last Updated: 2026-05-13</p>
+
+                    <button>Update</button>
+
+                    <button>Delete</button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="inventory-section">
+
+            <h2>Inventory Summary</h2>
+
+            <div class="summary-card">
+
+                <p>Total Products: 
+                    <span id="total-products">0</span>
+                </p>
+
+                <p>Total Inventory Value: 
+                    <span id="inventory-value">$0</span>
+                </p>
+
+                <p>Total Categories: 
+                    <span id="total-categories">0</span>
+                </p>
+
+            </div>
+
+        </section>
+
+        <section class="pagination-section">
+
+            <h2>Pagination</h2>
+
+            <button id="prev-page">
+                Previous
+            </button>
+
+            <button id="next-page">
+                Next
+            </button>
+
+        </section>
+
+        <section class="result-section">
+
+            <h2>Operation Result</h2>
+
+            <div id="result-output">
+
+                Results will appear here...
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

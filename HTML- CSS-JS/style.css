@@ -1,0 +1,174 @@
+body{
+    margin: 10px;
+    padding: 10px;
+    background-color: #41114c;
+    font-family: Arial, sans-serif, Helvetica;
+    justify-content: center;
+    align-items: center;
+    color: #ffff;
+}
+ 
+a {
+    color: beige;
+    margin: 10px;
+    padding: 10px;
+}
+ 
+header {
+    color: azure;
+    font-family: cursive;
+}
+ 
+/* Universal selector to apply box-sizing to all elements for easier layout control */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+ 
+/* type selector to style all fieldsets with a consistent look */
+fieldset {
+    border: 2px solid #7f8c8d;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}  
+ 
+/* class selector to style form groups for better spacing and alignment */
+.links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+ 
+#aboutus {
+    color: #ecf0f1;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 600px;
+    margin: 20px auto;
+}
+ 
+[id="aboutus"]
+{
+    background-color: #2c3e50;
+    border: 1px solid #34495e;
+}
+ 
+[type="search"] {
+    padding: 10px;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 400px;
+}
+ 
+[type="submit"] {
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}  
+ 
+/* Attribute selector to style links with a title attribute for better visibility */
+a[title] {
+    color: #3498db;
+    text-decoration: none;
+}
+ 
+/* Attribute selector to style links that point to Notes.txt with an underline for emphasis */
+a[href="Notes.txt"] {
+    text-decoration: underline;
+    color: #e74c3c;
+}
+ 
+/* href starting with "abc" to style links that start with a specific pattern for categorization */
+a[href^="abc"]
+{
+    color: #9b59b6;
+}
+ 
+/* href ending with ".html" to style links that end with a specific file type for differentiation */
+a[href$=".com5"]
+{
+font-family: Arial, Helvetica, sans-serif;
+}
+ 
+/* href containing "org" to style links that contain a specific keyword for highlighting */
+a[href*="org"] {
+    background-color: #e67e22;
+}  
+ 
+/* name ~= "example" to style links that have a specific word in their name attribute for targeting */
+a[name~="example"] {
+    background-color: #e74c3c;
+}
+ 
+/* Attribute selector to style links that do not have an href attribute for differentiation */
+a:not([href]) {
+    color: #95a5a6;
+    font-style: italic;
+}
+ 
+/* Combinator selector to style links that are direct children of a header for better visibility */
+header > a {
+    color: #2ecc71;
+    font-weight: bold;
+}
+ 
+/* Combinator selector to style paragraphs that are direct children of a div for better readability */
+div > p
+{
+    font-size: large;
+}
+ 
+/* Combinator selector to style paragraphs that are descendants of a div for better readability */  
+div p
+{
+    background-color: #3489c2;
+}
+ 
+/* Combinator selector to style paragraphs that are siblings of a div for better readability */
+div ~ p
+{
+    color: #ecf0f1;
+}
+ 
+button:hover {
+    background-color: #1abc9c;
+}  
+ 
+a:visited {
+    color: #8e44ad;
+}
+ 
+a:active {
+    color: #c0392b;
+}
+ 
+ol li:first-child {
+    font-weight: bold;
+}
+ 
+ol li:last-child {
+    font-style: italic;
+}
+ 
+ol li:nth-child(2) {
+    color: #e67e22;
+}
+ 
+li{
+    margin: 10px;
+    padding: 10px;
+    list-style-position: inside;
+}
+ 
+.list
+{
+    background-image: linear-gradient(to bottom right, red, orange, yellow, rgb(147, 250, 87), green ,black);
+}
+ 

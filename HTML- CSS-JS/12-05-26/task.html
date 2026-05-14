@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Performance Analysis System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Student Performance Analysis System</h1>
+        <p>Analyze student records using Arrays, Maps, and Sets</p>
+    </header>
+
+    <section class="input-section">
+
+        <h2>Add Student Record</h2>
+
+        <form id="student-form">
+
+            <label>Student ID</label>
+            <input type="number" id="student-id">
+
+            <label>Student Name</label>
+            <input type="text" id="student-name">
+
+            <label>Age</label>
+            <input type="number" id="student-age">
+
+            <label>Subjects (comma separated)</label>
+            <input type="text" id="student-subjects">
+
+            <label>Scores (comma separated)</label>
+            <input type="text" id="student-scores">
+
+            <button type="button" id="add-student-btn">
+                Add Student
+            </button>
+
+        </form>
+
+    </section>
+
+    <section class="filter-section">
+
+        <h2>Search and Filter</h2>
+
+        <input type="text"
+            id="search-name"
+            placeholder="Search by name">
+
+        <select id="filter-grade">
+
+            <option value="">Filter by Grade</option>
+
+            <option value="A">Grade A</option>
+            <option value="B">Grade B</option>
+            <option value="C">Grade C</option>
+            <option value="D">Grade D</option>
+            <option value="F">Grade F</option>
+
+        </select>
+
+        <select id="filter-subject">
+
+            <option value="">Filter by Subject</option>
+
+            <option value="Math">Math</option>
+            <option value="Physics">Physics</option>
+            <option value="Chemistry">Chemistry</option>
+            <option value="Biology">Biology</option>
+
+        </select>
+
+    </section>
+
+    <section class="statistics-section">
+
+        <h2>Statistics Dashboard</h2>
+
+        <div class="stats-container">
+
+            <div class="stat-card">
+                <h3>Total Students</h3>
+                <p id="total-students">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Class Average</h3>
+                <p id="class-average">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Grade Distribution</h3>
+                <p id="grade-distribution">
+                    A:0 B:0 C:0 D:0 F:0
+                </p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Subject Performance</h3>
+                <p id="subject-performance">
+                    No Data
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="student-table-section">
+
+        <h2>Student Records</h2>
+
+        <table border="1">
+
+            <thead>
+
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Subjects</th>
+                    <th>Scores</th>
+                    <th>Average</th>
+                    <th>Grade</th>
+                    <th>Action</th>
+                </tr>
+
+            </thead>
+
+            <tbody id="student-table-body">
+
+                <tr>
+
+                    <td>101</td>
+                    <td>Alice Johnson</td>
+                    <td>20</td>
+                    <td>Math, Physics, Chemistry</td>
+                    <td>85, 90, 78</td>
+                    <td>84.33</td>
+                    <td>B</td>
+
+                    <td>
+                        <button>Delete</button>
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+    <section class="analysis-section">
+
+        <h2>Data Analysis Operations</h2>
+
+        <button>Filter Students</button>
+
+        <button>Sort by Average</button>
+
+        <button>Find Highest Score</button>
+
+        <button>Generate Leaderboard</button>
+
+        <button>Show Subject Statistics</button>
+
+        <button>Check Unique Subjects</button>
+
+        <button>Group Students</button>
+
+        <button>Merge Records</button>
+
+    </section>
+
+    <section class="result-section">
+
+        <h2>Result Output</h2>
+
+        <div id="result-output">
+
+            Results will appear here...
+
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

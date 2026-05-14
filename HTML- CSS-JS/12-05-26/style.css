@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: darkblue;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: gray;
+}
+
+section {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px gray;
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: darkblue;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+input,
+select {
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border: 2px solid blue;
+}
+
+button {
+    padding: 10px;
+    background-color: darkblue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: blue;
+}
+
+.stats-container {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.stat-card {
+    flex: 1;
+    min-width: 200px;
+    background-color: #eeeeee;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.stat-card h3 {
+    margin-bottom: 10px;
+    color: darkblue;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid gray;
+}
+
+th {
+    background-color: darkblue;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #dbefff;
+}
+
+
+.grade-a {
+    color: green;
+    font-weight: bold;
+}
+
+.grade-b {
+    color: blue;
+    font-weight: bold;
+}
+
+.grade-c {
+    color: goldenrod;
+    font-weight: bold;
+}
+
+.grade-d {
+    color: orange;
+    font-weight: bold;
+}
+
+.grade-f {
+    color: red;
+    font-weight: bold;
+}
+
+
+.analysis-section button {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+#result-output {
+    background-color: #eeeeee;
+    padding: 15px;
+    border-radius: 5px;
+    min-height: 100px;
+    white-space: pre-wrap;
+}
+
+@media (max-width: 768px) {
+
+    .stats-container {
+        flex-direction: column;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    input,
+    select,
+    button {
+        width: 100%;
+    }
+}

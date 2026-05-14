@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Operations App</title>
+</head>
+<body>
+
+    <header>
+        <h1>String Operations Application</h1>
+        <p>Perform different string operations</p>
+    </header>
+
+    <section>
+
+        <h2>Enter Your Text</h2>
+
+        <input type="text" id="text-input" placeholder="Enter text here">
+
+        <br><br>
+
+    </section>
+
+    <section>
+
+        <h2>Task 1: String Information Display</h2>
+
+        <button onclick="stringLength()">String Length</button>
+        <button onclick="toUpperCaseText()">Uppercase</button>
+        <button onclick="toLowerCaseText()">Lowercase</button>
+        <button onclick="firstCharacter()">First Character</button>
+        <button onclick="lastCharacter()">Last Character</button>
+        <button onclick="containsNumbers()">Contains Numbers</button>
+
+    </section>
+
+    <section>
+
+        <h2>Task 2: String Manipulation</h2>
+
+        <button onclick="reverseString()">Reverse String</button>
+        <button onclick="removeWhitespace()">Remove Whitespace</button>
+        <button onclick="removeAllSpaces()">Remove All Spaces</button>
+        <button onclick="countVowels()">Count Vowels</button>
+        <button onclick="countConsonants()">Count Consonants</button>
+        <button onclick="wordCount()">Word Count</button>
+
+    </section>
+
+    <section>
+
+        <h2>Task 3: String Validation</h2>
+
+        <button onclick="isPalindrome()">Is Palindrome</button>
+        <button onclick="isEmailValid()">Is Email Valid</button>
+        <button onclick="hasSpecialCharacters()">Has Special Characters</button>
+        <button onclick="isStrongPassword()">Is Strong Password</button>
+
+    </section>
+
+    <section>
+
+        <h2>Task 4: String Transformation</h2>
+
+        <button onclick="titleCase()">Title Case</button>
+        <button onclick="camelCase()">Camel Case</button>
+        <button onclick="snakeCase()">Snake Case</button>
+        <button onclick="kebabCase()">Kebab Case</button>
+        <button onclick="alternatingCase()">Alternating Case</button>
+
+    </section>
+
+    <section>
+
+        <h2>Task 5: String Search and Replace</h2>
+
+        <button onclick="findPosition()">Find Position</button>
+        <button onclick="replaceFirst()">Replace First</button>
+        <button onclick="replaceAllWords()">Replace All</button>
+        <button onclick="extractDomain()">Extract Domain</button>
+        <button onclick="extractInitials()">Extract Initials</button>
+
+    </section>
+
+    <section>
+
+        <h2>Task 6: Advanced Operations</h2>
+
+        <button onclick="truncateString()">Truncate String</button>
+        <button onclick="repeatString()">Repeat String</button>
+        <button onclick="maskString()">Mask String</button>
+        <button onclick="extractNumbers()">Extract Numbers</button>
+        <button onclick="characterFrequency()">Character Frequency</button>
+
+    </section>
+
+    <section>
+
+        <h2>Result</h2>
+
+        <div id="result-area">
+            Output
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>Error Message</h2>
+
+        <p id="error-message">
+            Invalid input message
+        </p>
+
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

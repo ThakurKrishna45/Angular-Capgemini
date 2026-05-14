@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge Hub Quiz</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Knowledge Hub Quiz</h1>
+            <p>General Knowledge Quiz</p>
+
+            <div id="timer">
+                Time Left: 01:53
+            </div>
+        </header>
+      <section class="progress-section">
+
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
+              <div class="question-status">
+            </div>
+
+        </section>
+
+        <section class="quiz-section">
+
+            <h2 id="question-number">
+                Question 1 of 5
+            </h2>
+
+            <div id="question-text">
+                Here is question?
+            </div>
+
+            <div class="options">
+
+                <button class="option-btn">A. Option A</button>
+
+                <button class="option-btn">B. Option B</button>
+
+                <button class="option-btn">C. Option C</button>
+
+                <button class="option-btn">D. Option D</button>
+
+            </div>
+
+            <div class="navigation-buttons">
+
+                <button id="prev-btn">
+                    Previous
+                </button>
+
+                <button id="next-btn">
+                    Next
+                </button>
+
+                <button id="submit-btn" hidden>
+                    Submit Quiz
+                </button>
+
+            </div>
+
+        </section>
+
+        <section class="results-section" hidden>
+
+            <h2>Quiz Results</h2>
+
+            <div class="score-box">
+
+                <p>Total Score: <span id="score"></span></p>
+
+                <p>Percentage: <span id="percentage"></span></p>
+
+                <p id="result-message">
+                </p>
+
+            </div>
+
+            <div class="answer-review">
+
+                <h3>Answer Review</h3>
+
+                <div class="review-item">
+
+                    <p><strong>Question:</strong> </p>
+
+                    <p><strong>Your Answer:</strong></p>
+
+                    <p><strong>Correct Answer:</strong></p>
+
+                    <p class="wrong"></p>
+
+                </div>
+
+            </div>
+
+            <button id="restart-btn">
+                Restart Quiz
+            </button>
+
+        </section>
+
+    </div>
+      <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registration Form</title>
+    </head>
+    <body style="padding: 10px; background-color: antiquewhite;">
+        <form action="welcome.html" method="post" novalidate target="_self" autocomplete="on"
+        style="margin: auto; width: 50%; margin: auto; border: 1px solid black; padding: 10px; background-color: wheat; text-align: center;">
+            <p>
+                <label for="firstname" style="display:inline-block; width:140px;">First Name:</label>
+                <input type="text" id="firstname" name="firstname" required
+                style="width: 50%;">
+            </p>
+            <p>
+                <label for="lastname" style="display:inline-block; width:140px;">Last Name:</label>
+                <input type="text" id="lastname" name="lastname" required
+                 style="width: 50%;">
+            </p>
+            <p>
+                <label for="email" style="display:inline-block; width:140px;">Email:</label>
+                <input type="email" id="email" name="email" required
+                 style="width: 50%;">
+            </p>
+            <p>
+                <label for="city" style="display:inline-block; width:140px;">City:</label>
+                <select id="city" name="city" required size="3" multiple
+                 style="width: 50%">
+                    <option value="">Select a city</option>
+                    <option value="newyork" selected>New York</option>
+                    <option value="losangeles">Los Angeles</option>
+                    <option value="chicago">Chicago</option>
+                    <option value="Pune">Pune</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="delhi">Delhi</option>
+                    <option value="houston">Houston</option>
+                </select>
+            </p>
+ 
+            <p>
+                <label for="comments" style="display:inline-block; width:140px;">Comments:</label>
+                <textarea id="comments" name="comments" required rows="4" cols="20"
+                 style="width: 50%;"></textarea>
+            </p>
+ 
+            <p>
+                <label for="gender" style="display:inline-block; width:140px;">Gender:</label>
+                <input type="radio" id="male" name="gender" value="male" required>
+                    <span>Male</span>
+                </input>
+                <input type="radio" id="female" name="gender" value="female" required>
+                    <span>Female</span>
+                </input>
+            </p>
+ 
+            <p> Get Alert
+                <button type="button" onclick="alert('This is an alert!')">Click Me</button>
+            </p>
+            <fieldset>
+                <legend> Educational Details:</legend>
+                <p>
+                    <label for="education">Education:</label>
+                    <select id="education" name="education" required>
+                        <option value="">Select your education</option>
+                        <option value="highschool">High School</option>
+                        <option value="bachelor">Bachelor's Degree</option>
+                        <option value="master">Master's Degree</option>
+                        <option value="phd">PhD</option>    
+                    </select>
+                </p>
+                <p>
+                    <label for="experience">Experience:</label>
+                    <input type="text" id="experience" name="experience" required>
+                </p>
+                <p>
+                    <label for ="skill">Skills:</label>
+                    <input list="skills" id="skill" name="skill" required>
+                    <datalist id="skills">
+                        <option value="HTML"></option>
+                        <option value="CSS"></option>
+                        <option value="JavaScript"></option>
+                        <option value="Angular"></option>
+                        <option value="React"></option>
+                        <option value="Node.js"></option>
+                    </datalist>
+                </p>
+            </fieldset>
+ 
+           
+           
+            <fieldset>
+                <legend>Terms and Conditions</legend>
+                <p>
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I agree to the terms and conditions.</label>
+                </p>
+            </fieldset>
+ 
+        </form>
+ 
+        <form oninput="result.value=parseInt(num1.value)+parseInt(num2.value)">
+                <caption> Calculator</caption>
+                <p>
+                    <label for="num1">Number 1:</label>
+                    <input type="number" id="num1" name="num1" required>
+                </p>
+                <p>
+                    <label for="num2">Number 2:</label>
+                    <input type="number" id="num2" name="num2" required>
+                </p>        
+                <p>
+                    <output name="result" id="result"></output>
+                </p>
+                <p>
+                    <button type="submit" ">Calculate</button>
+                </p>
+        </form>
+    </body>
