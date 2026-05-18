@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Pattern Challenge</title>
+
+    <style>
+
+        body{
+            font-family: Arial;
+            background-color: white;
+            padding: 20px;
+        }
+
+        h1{
+            color: black;
+            font-size: 22px;
+        }
+
+        input{
+            padding: 5px;
+            width: 180px;
+        }
+
+        button{
+            padding: 5px 10px;
+            background-color: gray;
+            color: white;
+            border: none;
+            margin-top: 10px;
+            margin-right: 5px;
+        }
+
+        p{
+            color: black;
+        }
+
+        table{
+            margin-top: 10px;
+        }
+
+        td{
+            border: 1px solid black;
+            padding: 6px;
+            min-width: 35px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Number Pyramid</h1>
+
+    <input type="number" id="pyramid" placeholder="Enter Number">
+
+    <br>
+
+    <button onclick="showPyramid()">
+        Generate
+    </button>
+
+    <p id="pyramidResult"></p>
+
+
+
+
+
+    <h1>Fizz Buzz</h1>
+
+    <input type="number" id="fizz" placeholder="Enter Number">
+
+    <br>
+
+    <button onclick="showFizz()">
+        Generate
+    </button>
+
+    <p id="fizzResult"></p>
+
+
+
+
+
+    <h1>Sum Calculator</h1>
+
+    <input type="number" id="sum" placeholder="Enter Number">
+
+    <br>
+
+    <button onclick="showSum()">
+        Calculate
+    </button>
+
+    <p id="sumResult"></p>
+
+
+
+
+
+    <h1>Reverse Pyramid</h1>
+
+    <input type="number" id="reverse" placeholder="Enter Number">
+
+    <br>
+
+    <button onclick="showReverse()">
+        Generate
+    </button>
+
+    <p id="reverseResult"></p>
+
+
+
+
+
+    <button onclick="generateAll()">
+        Generate All
+    </button>
+
+    <button onclick="clearAll()">
+        Clear All
+    </button>
+
+
+
+
+    <script>
+
+        function isPrime(num){
+
+            if(num < 2){
+
+                return false;
+
+            }
+
+            for(let i = 2; i < num; i++){
+
+                if(num % i == 0){
+
+                    return false;
+
+                }
+            }
+
+            return true;
+        }
+
+
+
+
+        function isSquare(num){
+
+            let root = Math.floor(Math.sqrt(num));
+
+            if(root * root == num){
+
+                return true;
+
+            }
+
+            else{
+
+                return false;
+
+            }
+        }
+
+
+
+
+        function showPyramid(){
+
+            let n = document.getElementById("pyramid").value;
+
+            let text = "";
+
+            let middle = Math.floor(n / 2) + 1;
+
+            for(let i = 1; i <= n; i++){
+
+                if(i == middle){
+
+                    for(let j = 1; j <= i; j++){
+
+                        if(i % 3 == 0){
+
+                            text += "*" + i + " ";
+
+                        }
+
+                        else{
+
+                            text += i + " ";
+
+                        }
+                    }
+                }
+
+                else if(i % 2 == 0){
+
+                    for(let j = i; j >= 1; j--){
+
+                        if(j % 3 == 0){
+
+                            text += "*" + j + " ";
+
+                        }
+
+                        else{
+
+                            text += j + " ";
+
+                        }
+                    }
+                }
+
+                else{
+
+                    for(let j = 1; j <= i; j++){
+
+                        if(j % 3 == 0){
+
+                            text += "*" + j + " ";
+
+                        }
+
+                        else{
+
+                            text += j + " ";
+
+                        }
+                    }
+                }
+
+                text += "<br>";
+            }
+
+            pyramidResult.innerHTML = text;
+        }
+
+
+
+
+        function showFizz(){
+
+            let n = document.getElementById("fizz").value;
+
+            let text = "<table>";
+
+            let count = 0;
+
+            for(let i = 1; i <= n; i++){
+
+                if(count == 0){
+
+                    text += "<tr>";
+
+                }
+
+                if(i % 3 == 0 && i % 5 == 0){
+
+                    text += "<td style='background:gray'>FizzBuzz</td>";
+
+                }
+
+                else if(i % 3 == 0){
+
+                    text += "<td style='background:lightblue'>Fizz</td>";
+
+                }
+
+                else if(i % 5 == 0){
+
+                    text += "<td style='background:lightgreen'>Buzz</td>";
+
+                }
+
+                else if(isPrime(i)){
+
+                    text += "<td style='background:gold'>" + i + "</td>";
+
+                }
+
+                else{
+
+                    text += "<td>" + i + "</td>";
+
+                }
+
+                count++;
+
+                if(count == 3){
+
+                    text += "</tr>";
+                    count = 0;
+
+                }
+            }
+
+
+
+            if(count != 0){
+
+                while(count < 3){
+
+                    text += "<td></td>";
+                    count++;
+
+                }
+
+                text += "</tr>";
+            }
+
+            text += "</table>";
+
+            fizzResult.innerHTML = text;
+        }
+
+
+
+
+        function showSum(){
+
+            let n = document.getElementById("sum").value;
+
+            let even = 0;
+            let odd = 0;
+            let mix = 0;
+            let prime = 0;
+
+            for(let i = 1; i <= n; i++){
+
+                if(i % 2 == 0){
+
+                    even += i;
+
+                }
+
+                else{
+
+                    odd += i;
+
+                }
+
+
+
+                if((i % 3 == 0 || i % 5 == 0) &&
+                !(i % 3 == 0 && i % 5 == 0)){
+
+                    mix += i;
+
+                }
+
+
+
+                if(isPrime(i)){
+
+                    prime += i;
+
+                }
+            }
+
+
+
+            let high = even;
+            let low = even;
+
+            if(odd > high){
+
+                high = odd;
+
+            }
+
+            if(mix > high){
+
+                high = mix;
+
+            }
+
+            if(prime > high){
+
+                high = prime;
+
+            }
+
+
+
+            if(odd < low){
+
+                low = odd;
+
+            }
+
+            if(mix < low){
+
+                low = mix;
+
+            }
+
+            if(prime < low){
+
+                low = prime;
+
+            }
+
+
+
+            let text = "";
+
+
+
+            if(even == high){
+
+                text += "<p style='color:green'>Even Sum = " + even + "</p>";
+
+            }
+
+            else if(even == low){
+
+                text += "<p style='color:red'>Even Sum = " + even + "</p>";
+
+            }
+
+            else{
+
+                text += "<p>Even Sum = " + even + "</p>";
+
+            }
+
+
+
+
+            if(odd == high){
+
+                text += "<p style='color:green'>Odd Sum = " + odd + "</p>";
+
+            }
+
+            else if(odd == low){
+
+                text += "<p style='color:red'>Odd Sum = " + odd + "</p>";
+
+            }
+
+            else{
+
+                text += "<p>Odd Sum = " + odd + "</p>";
+
+            }
+
+
+
+
+            if(mix == high){
+
+                text += "<p style='color:green'>3 or 5 Sum = " + mix + "</p>";
+
+            }
+
+            else if(mix == low){
+
+                text += "<p style='color:red'>3 or 5 Sum = " + mix + "</p>";
+
+            }
+
+            else{
+
+                text += "<p>3 or 5 Sum = " + mix + "</p>";
+
+            }
+
+
+
+
+            if(prime == high){
+
+                text += "<p style='color:green'>Prime Sum = " + prime + "</p>";
+
+            }
+
+            else if(prime == low){
+
+                text += "<p style='color:red'>Prime Sum = " + prime + "</p>";
+
+            }
+
+            else{
+
+                text += "<p>Prime Sum = " + prime + "</p>";
+
+            }
+
+            sumResult.innerHTML = text;
+        }
+
+
+function showReverse(){
+
+    let n = document.getElementById("reverse").value;
+
+    let text = "";
+
+    for(let i = n; i >= 1; i--){
+
+        for(let j = 1; j <= i; j++){
+
+            let value = i * j;
+
+            if(isSquare(value)){
+
+                text += "■ ";
+
+            }
+
+            else{
+
+                text += i + " ";
+
+            }
+        }
+
+        text += "<br>";
+    }
+
+    reverseResult.innerHTML = text;
+}
+
+
+
+        function generateAll(){
+
+            showPyramid();
+            showFizz();
+            showSum();
+            showReverse();
+        }
+
+
+
+
+        function clearAll(){
+
+            pyramid.value = "";
+            fizz.value = "";
+            sum.value = "";
+            reverse.value = "";
+
+            pyramidResult.innerHTML = "";
+            fizzResult.innerHTML = "";
+            sumResult.innerHTML = "";
+            reverseResult.innerHTML = "";
+        }
+
+    </script>
+
+</body>
+
+</html>
